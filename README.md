@@ -18,3 +18,5 @@ username: administrator@avs.lab
 
 ## Challenges
 Use this challenges from https://github.com/microsoft/MicroHack/tree/main/03-Azure/01-03-Infrastructure/05_Azure_VMware_Solution
+
+Install application (app+sql) from https://github.com/tkubica12/MicroHack-AppInnovation/tree/main/baseInfra/scripts
