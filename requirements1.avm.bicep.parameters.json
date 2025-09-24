@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "name": {
+      "value": "avslab1"
+    },
+    "location": {
+      "value": "swedencentral"
+    },
+    "managementCidr": {
+      "value": "10.183.0.0/16"
+    },
+    "gatewaySubnetCidr": {
+      "value": "10.183.2.0/24"
+    },
+    "bastionSubnetCidr": {
+      "value": "10.183.3.0/24"
+    },
+    "serversSubnetCidr": {
+      "value": "10.183.0.0/24"
+    },
+    "adminUserName": {
+        "value": "avslab-admin"
+    },
+    "sku": {
+      "value": "AV36"
+    },
+    "hostCount": {
+      "value": 3
+    },
+    "avsManagementCidr": {
+      "value": "10.83.0.0/22"
+    }
+  }
+}
