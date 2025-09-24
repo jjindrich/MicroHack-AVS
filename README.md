@@ -3,8 +3,16 @@
 ## Build lab
 
 Steps
-- run bicep to provision AVS + Jump VM (or use ELZ https://github.com/Azure/Enterprise-Scale-for-AVS)
-- create users in Azure Subscription
+- Run bicep to provision AVS + Jump VM (or use ELZ https://github.com/Azure/Enterprise-Scale-for-AVS)
+```
+az login
+az deployment group create -g "avs-lab-rg" -f "requirements.avm.bicep" --parameters "requirements1.avm.bicep.parameters.json"
+```
+- Create users in Azure tenant based on template - 4 users per tenant
+- Create group avsadmins with members
+- Set contributor permissions for avsadmins group to subscription
+- Set permissions for jumpbox managed identity to AVS (Contributor role)
+- Create connection to AVS from Express Route
 - deploy nested labs - scripts from https://github.com/microsoft/MicroHack/tree/main/03-Azure/01-03-Infrastructure/05_Azure_VMware_Solution/Lab/scripts
   - fill nestedlabs.yml with credentials
   - run bootstrap.ps1
